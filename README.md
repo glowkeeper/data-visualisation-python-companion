@@ -51,7 +51,7 @@ notebooks/
     week-01/
         exploring-data-with-pandas.ipynb
     week-02/
-        visualising-data-with-matplotlib.ipynb
+        filtering-sorting-and-grouping.ipynb
     week-03/
         dashboard-storytelling.ipynb
     week-04/
