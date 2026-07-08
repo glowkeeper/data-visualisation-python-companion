@@ -71,7 +71,7 @@ data/
     HighStreetRetailData.xlsx
 
 README.md
-requirements.txt
+pyproject.toml
 ```
 
 Each notebook mirrors the corresponding teaching week and extends the Tableau techniques introduced during the module.
