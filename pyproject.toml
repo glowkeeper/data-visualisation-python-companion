@@ -1,0 +1,19 @@
+[project]
+name = "dvi-python-companion"
+version = "0.1.0"
+description = "Optional Python companion notebooks for the University of Roehampton Data Visualisation and Intelligence module."
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "jupyterlab",
+    "matplotlib",
+    "openpyxl",
+    "pandas",
+    "plotly",
+    "scikit-learn",
+    "streamlit",
+]
+
+[tool.uv]
+package = false

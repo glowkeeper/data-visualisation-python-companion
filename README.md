@@ -49,57 +49,195 @@ The notebooks are heavily commented and designed to be read as tutorials rather 
 ```text
 notebooks/
     week-01/
-        beyond-tableau.ipynb
+        exploring-data-with-pandas.ipynb
     week-02/
-        beyond-tableau.ipynb
+        visualising-data-with-matplotlib.ipynb
     week-03/
-        beyond-tableau.ipynb
+        dashboard-storytelling.ipynb
     week-04/
-        beyond-tableau.ipynb
+        forecasting-with-python.ipynb
     week-05/
-        beyond-tableau.ipynb
+        accessible-and-responsible-visualisation.ipynb
     week-06/
-        beyond-tableau.ipynb
+        ai-assisted-data-analysis.ipynb
     week-07/
-        beyond-tableau.ipynb
+        interactive-visualisations-with-plotly.ipynb
     week-08/
-        beyond-tableau.ipynb
+        explaining-ai-and-ethical-analytics.ipynb
     week-09/
-        beyond-tableau.ipynb
-    week-10/
-        beyond-tableau.ipynb
+        dashboard-prototyping-with-streamlit.ipynb
 
 data/
+    HighStreetRetailData.xlsx
 
 README.md
 requirements.txt
 ```
 
-Each weekly notebook follows the rhythm of the taught module and extends the Tableau activities covered during that week's sessions.
+Each notebook mirrors the corresponding teaching week and extends the Tableau techniques introduced during the module.
 
 ---
 
-### Installing Python
+## Installing Python
 
-If you already have a working Python installation, you can skip this section.
+This repository uses **uv**, a fast modern Python package manager that automatically creates and manages virtual environments.
 
-Otherwise, install:
+### 1. Install Python
 
-- Python 3.11 or later
-- Git
-- Visual Studio Code (recommended)
-
-Download Python from:
+Download Python 3.11 or later from:
 
 https://www.python.org/
 
-Download Visual Studio Code from:
+---
 
-https://code.visualstudio.com/
+### 2. Install uv
+
+#### macOS / Linux
+
+```bash
+# DVI Python Companion
+
+A companion repository for the **Data Visualisation and Intelligence (DVI)** module at the **University of Roehampton**.
+
+This repository provides **optional Python notebooks** that complement the Tableau-based teaching materials used throughout the module.
+
+The notebooks are **not assessed** and are **not required** to complete the module successfully. They are intended for students who would like to explore how similar analytical tasks can be performed programmatically using Python.
 
 ---
 
-## Clone the Repository
+# Purpose
+
+The DVI module focuses on transforming:
+
+> **Data → Insight → Decision**
+
+Throughout the module, you will primarily use **Tableau Public** to explore data, build visualisations and communicate analytical insight.
+
+This companion repository explores the same ideas using Python.
+
+Rather than replacing Tableau, these notebooks demonstrate:
+
+- how Tableau operations translate into Python code
+- how data can be manipulated programmatically
+- how analyses can be automated
+- where Python provides capabilities beyond Tableau
+
+The emphasis remains on analytical thinking and communication rather than programming complexity.
+
+---
+
+# Who is this for?
+
+This repository is intended for students who:
+
+- are curious about Python
+- would like to explore data science tools
+- have some programming experience
+- are considering careers involving data analytics or data science
+
+If you have never written Python before, don't worry.
+
+The notebooks are heavily commented and designed to be read as tutorials rather than programming exercises.
+
+---
+
+# Repository Structure
+
+```text
+notebooks/
+    week-01/
+        exploring-data-with-pandas.ipynb
+    week-02/
+        visualising-data-with-matplotlib.ipynb
+    week-03/
+        dashboard-storytelling.ipynb
+    week-04/
+        forecasting-with-python.ipynb
+    week-05/
+        accessible-and-responsible-visualisation.ipynb
+    week-06/
+        ai-assisted-data-analysis.ipynb
+    week-07/
+        interactive-visualisations-with-plotly.ipynb
+    week-08/
+        explaining-ai-and-ethical-analytics.ipynb
+    week-09/
+        dashboard-prototyping-with-streamlit.ipynb
+
+data/
+    HighStreetRetailData.xlsx
+
+README.md
+requirements.txt
+```
+
+Each notebook mirrors the corresponding teaching week and extends the Tableau techniques introduced during the module.
+
+---
+
+## Installing Python
+
+This repository uses **uv**, a modern Python package manager that automatically manages virtual environments and project dependencies.
+
+If you already have Python installed, the entire setup process should take only a few minutes.
+
+### 1. Install Python
+
+Download and install **Python 3.11** or later from:
+
+https://www.python.org/
+
+To check that Python has been installed successfully, open a terminal and run:
+
+```bash
+python3 --version
+```
+
+or on Windows:
+
+```powershell
+python --version
+```
+
+You should see something similar to:
+
+```text
+Python 3.13.5
+```
+
+---
+
+### 2. Install uv
+
+`uv` is a fast, modern replacement for tools such as `pip` and `virtualenv`.
+
+#### macOS / Linux
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+#### Windows (PowerShell)
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+Alternatively, if you already have Python installed:
+
+```bash
+pip install uv
+```
+
+To verify the installation:
+
+```bash
+uv --version
+```
+
+---
+
+### 3. Clone the Repository
 
 ```bash
 git clone https://github.com/<your-username>/dvi-python-companion.git
@@ -109,60 +247,75 @@ cd dvi-python-companion
 
 ---
 
-## Create a Virtual Environment
+### 4. Install the Project
 
-### Windows
+This repository includes a `pyproject.toml` file that defines all required Python packages.
 
-```powershell
-python -m venv .venv
-
-.venv\Scripts\activate
-```
-
-### macOS / Linux
+Simply run:
 
 ```bash
-python3 -m venv .venv
-
-source .venv/bin/activate
+uv sync
 ```
+
+This command will automatically:
+
+- create a virtual environment (`.venv`) if one does not already exist
+- install all required packages
+- prepare the notebooks for use
+
+No manual package installation is required.
 
 ---
 
-## Install the Required Packages
+### 5. Launch JupyterLab
+
+The easiest way to open the notebooks is:
 
 ```bash
-pip install -r requirements.txt
+uv run jupyter lab
 ```
 
-The repository currently uses only a small number of widely used libraries:
-
-- pandas
-- matplotlib
-- openpyxl
-- jupyter
-
-Additional packages may be introduced later as the notebooks become more advanced.
-
----
-
-## Launch Jupyter
-
-Once everything has been installed, start Jupyter with:
+Alternatively, you can use the classic notebook interface:
 
 ```bash
-jupyter notebook
-```
-
-or
-
-```bash
-jupyter lab
+uv run jupyter notebook
 ```
 
 A browser window should open automatically.
 
-Navigate to the notebook for the appropriate teaching week and begin working through it.
+Navigate to the notebook for the appropriate teaching week and begin exploring.
+
+---
+
+### 6. Updating the Environment
+
+If the repository is updated with additional packages in the future, simply run:
+
+```bash
+uv sync
+```
+
+again to install any new dependencies.
+
+---
+
+### Troubleshooting
+
+If you experience problems, try:
+
+```bash
+uv python list
+```
+
+to see the Python installations available on your system.
+
+You can also recreate the environment at any time by deleting the `.venv` directory and running:
+
+```bash
+uv sync
+```
+
+again.
 
 ---
 
@@ -177,9 +330,9 @@ Each notebook follows a simple pattern.
 5. Relate the work back to Tableau.
 6. Offer an optional extension activity.
 
-The notebooks are designed to be exploratory rather than prescriptive.
+The notebooks are intended to be exploratory.
 
-Feel free to modify the code and experiment.
+Feel free to modify the code, rerun cells and experiment.
 
 ---
 
@@ -187,24 +340,24 @@ Feel free to modify the code and experiment.
 
 These notebooks are an **optional companion resource**.
 
-They are **not**:
+They are **not** required for:
 
-- required for lectures
-- required for workshops
-- required for Assessment 1
-- required for Assessment 2
+- lectures
+- workshops
+- Assessment 1
+- Assessment 2
 
-Students can achieve excellent marks in the module without ever opening this repository.
+Students can successfully complete the module without ever using Python.
 
-The notebooks simply provide an additional route for students who wish to deepen their understanding of visual analytics through programming.
+The notebooks simply provide an additional perspective for students who would like to explore visual analytics through programming.
 
 ---
 
 ## Relationship to Tableau
 
-Throughout the module, Tableau remains the primary analytical tool.
+Tableau remains the primary analytical tool used throughout the module.
 
-The notebooks are intended to answer questions such as:
+The notebooks answer questions such as:
 
 - How does Tableau group data?
 - How would I filter data in Python?
@@ -212,7 +365,7 @@ The notebooks are intended to answer questions such as:
 - How can repetitive analysis be automated?
 - What additional analytical techniques become possible?
 
-The objective is not to replace Tableau, but to understand another way of working with data.
+The aim is not to replace Tableau, but to understand another way of working with data.
 
 ---
 
@@ -220,18 +373,15 @@ The objective is not to replace Tableau, but to understand another way of workin
 
 | Week | Python Focus |
 |------|--------------|
-| 1 | Loading and exploring datasets with pandas |
-| 2 | Filtering, sorting and grouping data |
-| 3 | Creating charts with matplotlib |
-| 4 | Trend analysis and forecasting |
-| 5 | Data quality and accessibility |
-| 6 | AI-assisted analytical workflows |
-| 7 | Interactive visualisations |
-| 8 | Ethics, transparency and explainability |
-| 9 | Project ideas and experimentation |
-| 10 | Further study and next steps |
-
-The notebooks may evolve over time to reflect changes to the taught module.
+| 1 | Exploring data with pandas |
+| 2 | Visualising data with matplotlib |
+| 3 | Dashboard storytelling |
+| 4 | Forecasting with Python |
+| 5 | Accessible and responsible visualisation |
+| 6 | AI-assisted data analysis |
+| 7 | Interactive visualisations with Plotly |
+| 8 | Explaining AI and ethical analytics |
+| 9 | Dashboard prototyping with Streamlit |
 
 ---
 
@@ -239,12 +389,12 @@ The notebooks may evolve over time to reflect changes to the taught module.
 
 Suggestions and improvements are always welcome.
 
-If you discover an issue, spot an error, or have an idea for a useful extension, please open an issue or submit a pull request.
+If you discover an issue or have an idea for a useful extension, please open an issue or submit a pull request.
 
 ---
 
 ## Licence
 
-This repository is provided as a teaching resource for the Data Visualisation and Intelligence module.
+This repository is provided as a teaching companion for the **Data Visualisation and Intelligence** module at the University of Roehampton.
 
 Unless otherwise stated, all original material is released under the MIT License.
