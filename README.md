@@ -142,10 +142,12 @@ uv --version
 
 ### 3. Clone the Repository
 
-```bash
-git clone https://github.com/<your-username>/dvi-python-companion.git
+There are many ways to clone a GitHub repository - below shows one way - it uses the `git` command-line client.
 
-cd dvi-python-companion
+```bash
+git clone https://github.com/glowkeeper/data-visualisation-python-companion.git
+
+cd data-visualisation-python-companion
 ```
 
 ---
@@ -179,7 +181,7 @@ There are two recommended ways to use the notebooks.
 If you already use Visual Studio Code, this provides the best experience.
 
 1. Install the **Jupyter** extension from the Extensions Marketplace.
-2. Open the `dvi-python-companion` repository in VS Code.
+2. Open the `data-visualisation-python-companion` repository in VS Code.
 3. Open one of the notebooks, for example:
 
    ```text
