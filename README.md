@@ -170,55 +170,89 @@ No manual package installation is required.
 
 ---
 
-### 5. Launch JupyterLab
+## Running the Notebooks
 
-The easiest way to open the notebooks is:
+There are two recommended ways to use the notebooks.
+
+### Option A — Visual Studio Code (Recommended)
+
+If you already use Visual Studio Code, this provides the best experience.
+
+1. Install the **Jupyter** extension from the Extensions Marketplace.
+2. Open the `dvi-python-companion` repository in VS Code.
+3. Open one of the notebooks, for example:
+
+   ```text
+   notebooks/week-01/01-exploring-data-with-pandas.ipynb
+   ```
+
+4. When prompted, select the project's **.venv** Python interpreter.
+5. You can now run cells individually or execute the entire notebook.
+
+Useful toolbar buttons include:
+
+- ▶ **Run Cell** — Executes the current cell.
+- ▶▶ **Run All** — Executes every cell from top to bottom.
+- 🔄 **Restart** — Restarts the Python kernel if you install additional packages or want to begin again.
+
+Code cells execute in order, so it is usually best to work through the notebook from top to bottom.
+
+---
+
+### Option B — JupyterLab (Browser)
+
+If you prefer, you can run JupyterLab directly from a terminal.
 
 ```bash
 uv run jupyter lab
 ```
 
-Alternatively, you can use the classic notebook interface:
-
-```bash
-uv run jupyter notebook
-```
-
 A browser window should open automatically.
 
-Navigate to the notebook for the appropriate teaching week and begin exploring.
+Navigate to:
+
+```text
+notebooks/
+```
+
+and open the notebook for the appropriate teaching week.
 
 ---
 
-### 6. Updating the Environment
+## Running Code
 
-If the repository is updated with additional packages in the future, simply run:
+Python notebooks are made up of **cells**.
 
-```bash
-uv sync
-```
+There are two types of cell:
 
-again to install any new dependencies.
+- **Markdown cells** contain explanations and instructions.
+- **Code cells** contain executable Python code.
+
+To execute a code cell:
+
+1. Click anywhere inside the cell.
+2. Press **Shift + Enter**.
+
+The code will run and any output will appear immediately beneath the cell.
+
+You can also use the **Run Cell** button displayed above each code cell.
 
 ---
 
-### Troubleshooting
+## Working Through a Notebook
 
-If you experience problems, try:
+The notebooks are designed to be completed in order.
 
-```bash
-uv python list
-```
+For each section:
 
-to see the Python installations available on your system.
+1. Read the explanation.
+2. Run the code cell.
+3. Examine the output.
+4. Complete any **Try it yourself** activities before moving on.
 
-You can also recreate the environment at any time by deleting the `.venv` directory and running:
+Many of the notebooks encourage experimentation.
 
-```bash
-uv sync
-```
-
-again.
+If you change some code, simply run the cell again to see the updated result.
 
 ---
 
@@ -236,6 +270,53 @@ Each notebook follows a simple pattern.
 The notebooks are intended to be exploratory.
 
 Feel free to modify the code, rerun cells and experiment.
+
+---
+
+## Restarting the Kernel
+
+The Python kernel remembers everything that has been executed.
+
+If you want to begin again from a clean state:
+
+- click **Restart** in VS Code, or
+- restart the kernel in JupyterLab.
+
+After restarting, choose **Run All** (or work through the notebook from the beginning) to recreate all variables and outputs.
+
+---
+
+## Updating the Environment
+
+If the repository is updated with additional packages in the future, simply run:
+
+```bash
+uv sync
+```
+
+again to install any new dependencies.
+
+If you already have a notebook open, restart the kernel afterwards so it can use the newly installed packages.
+
+---
+
+## Troubleshooting
+
+If you experience problems, try:
+
+```bash
+uv python list
+```
+
+to see the Python installations available on your system.
+
+You can also recreate the environment at any time by deleting the `.venv` directory and running:
+
+```bash
+uv sync
+```
+
+again.
 
 ---
 
