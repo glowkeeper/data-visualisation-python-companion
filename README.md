@@ -185,7 +185,7 @@ If you already use Visual Studio Code, this provides the best experience.
 3. Open one of the notebooks, for example:
 
    ```text
-   notebooks/week-01/01-exploring-data-with-pandas.ipynb
+   notebooks/week-01/behind-the-tableau-curtain.ipynb
    ```
 
 4. When prompted, select the project's **.venv** Python interpreter.
