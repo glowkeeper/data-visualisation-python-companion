@@ -7,12 +7,14 @@ requires-python = ">=3.11"
 
 dependencies = [
     "jupyterlab",
+    "jupytext",
     "matplotlib",
     "openpyxl",
     "pandas",
     "plotly",
     "scikit-learn",
     "streamlit",
+    "xlrd>=2.0.2",
 ]
 
 [tool.uv]

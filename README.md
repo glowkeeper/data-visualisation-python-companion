@@ -146,7 +146,7 @@ The notebooks are heavily commented and designed to be read as tutorials rather 
 ```text
 notebooks/
     week-01/
-        exploring-data-with-pandas.ipynb
+        behind-the-tableau-curtain.ipynb
     week-02/
         visualising-data-with-matplotlib.ipynb
     week-03/
