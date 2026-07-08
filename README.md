@@ -78,7 +78,7 @@ Each notebook mirrors the corresponding teaching week and extends the Tableau te
 
 ---
 
-## Installing Python
+## Project Installation
 
 This repository uses **uv**, a modern Python package manager that automatically manages virtual environments and project dependencies.
 
@@ -174,7 +174,7 @@ No manual package installation is required.
 
 ## Running the Notebooks
 
-There are two recommended ways to use the notebooks.
+There are two ways to use the notebooks.
 
 ### Option A — Visual Studio Code (Recommended)
 
