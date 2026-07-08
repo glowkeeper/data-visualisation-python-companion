@@ -1,2 +1,3 @@
-# data-visualisation-python-companion
-Roehampton's Data Visualisation Python Companion
+# Data Visualisation Python Companion
+
+Roehampton's Data Visualisation Python Companion.
