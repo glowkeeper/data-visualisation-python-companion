@@ -49,22 +49,31 @@ The notebooks are heavily commented and designed to be read as tutorials rather 
 ```text
 notebooks/
     week-01/
-        exploring-data-with-pandas.ipynb
+        behind-the-tableau-curtain.md
+        behind-the-tableau-curtain.ipynb
     week-02/
+        filtering-sorting-and-grouping.md
         filtering-sorting-and-grouping.ipynb
     week-03/
+        dashboard-storytelling.md
         dashboard-storytelling.ipynb
     week-04/
+        forecasting-with-python.md
         forecasting-with-python.ipynb
     week-05/
+        accessible-and-responsible-visualisation.md
         accessible-and-responsible-visualisation.ipynb
     week-06/
+        ai-assisted-data-analysis.md
         ai-assisted-data-analysis.ipynb
     week-07/
+        interactive-visualisations-with-plotly.md
         interactive-visualisations-with-plotly.ipynb
     week-08/
+        explaining-ai-and-ethical-analytics.md
         explaining-ai-and-ethical-analytics.ipynb
     week-09/
+        dashboard-prototyping-with-streamlit.md
         dashboard-prototyping-with-streamlit.ipynb
 
 data/
@@ -75,6 +84,8 @@ pyproject.toml
 ```
 
 Each notebook mirrors the corresponding teaching week and extends the Tableau techniques introduced during the module.
+
+Every notebook also has a Markdown version. You can read the Markdown directly on GitHub without installing Python or running any code. Even if you do not intend to complete the Python activities, the Markdown is recommended further reading because it explains analytical ideas and some of the work Tableau performs behind the scenes.
 
 ---
 
@@ -355,19 +366,21 @@ The aim is not to replace Tableau, but to understand another way of working with
 
 ---
 
-## Weekly Themes
+## Weekly Resources
 
-| Week | Python Focus |
-|------|--------------|
-| 1 | Exploring data with pandas |
-| 2 | Visualising data with matplotlib |
-| 3 | Dashboard storytelling |
-| 4 | Forecasting with Python |
-| 5 | Accessible and responsible visualisation |
-| 6 | AI-assisted data analysis |
-| 7 | Interactive visualisations with Plotly |
-| 8 | Explaining AI and ethical analytics |
-| 9 | Dashboard prototyping with Streamlit |
+You can read each Markdown version in your browser without setting up Python. If you want to work through the code, open the corresponding notebook after following the installation instructions above.
+
+| Week | Python Focus | Read on GitHub | Run as a Notebook |
+|------|--------------|----------------|-------------------|
+| 1 | Behind the Tableau Curtain | [Markdown](notebooks/week-01/behind-the-tableau-curtain.md) | [Notebook](notebooks/week-01/behind-the-tableau-curtain.ipynb) |
+| 2 | Filtering, Sorting and Grouping | [Markdown](notebooks/week-02/filtering-sorting-and-grouping.md) | [Notebook](notebooks/week-02/filtering-sorting-and-grouping.ipynb) |
+| 3 | Dashboard Storytelling | [Markdown](notebooks/week-03/dashboard-storytelling.md) | [Notebook](notebooks/week-03/dashboard-storytelling.ipynb) |
+| 4 | Forecasting with Python | [Markdown](notebooks/week-04/forecasting-with-python.md) | [Notebook](notebooks/week-04/forecasting-with-python.ipynb) |
+| 5 | Accessible and Responsible Visualisation | [Markdown](notebooks/week-05/accessible-and-responsible-visualisation.md) | [Notebook](notebooks/week-05/accessible-and-responsible-visualisation.ipynb) |
+| 6 | AI-Assisted Data Analysis | [Markdown](notebooks/week-06/ai-assisted-data-analysis.md) | [Notebook](notebooks/week-06/ai-assisted-data-analysis.ipynb) |
+| 7 | Interactive Visualisations with Plotly | [Markdown](notebooks/week-07/interactive-visualisations-with-plotly.md) | [Notebook](notebooks/week-07/interactive-visualisations-with-plotly.ipynb) |
+| 8 | Explaining AI and Ethical Analytics | [Markdown](notebooks/week-08/explaining-ai-and-ethical-analytics.md) | [Notebook](notebooks/week-08/explaining-ai-and-ethical-analytics.ipynb) |
+| 9 | Dashboard Prototyping with Streamlit | [Markdown](notebooks/week-09/dashboard-prototyping-with-streamlit.md) | [Notebook](notebooks/week-09/dashboard-prototyping-with-streamlit.ipynb) |
 
 ---
 
