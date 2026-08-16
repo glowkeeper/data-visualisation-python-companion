@@ -279,7 +279,7 @@ furniture_evidence
 fig, ax = plt.subplots(figsize=(9, 5))
 
 colours = [
-    "#c55a11" if value < 0 else "#548235"
+    "#c55a11" if value < 0 else "#3b6ea5"
     for value in furniture_evidence["Profit"]
 ]
 
@@ -299,6 +299,7 @@ ax.set_title("Furniture Profit Is Not Evenly Distributed", loc="left", fontweigh
 ax.set_xlabel("Profit")
 ax.set_ylabel("")
 ax.xaxis.set_major_formatter(FuncFormatter(lambda value, _: f"£{value / 1000:,.0f}k"))
+ax.margins(x=0.14)  # room for the outside label on the longest negative bar
 ax.spines[["top", "right", "left"]].set_visible(False)
 ax.grid(axis="x", alpha=0.2)
 ax.set_axisbelow(True)
@@ -353,7 +354,7 @@ discount_evidence
 fig, ax = plt.subplots(figsize=(9, 4.5))
 
 plot_data = discount_evidence.reset_index()
-colours = ["#c55a11" if value < 0 else "#548235" for value in plot_data["Profit"]]
+colours = ["#c55a11" if value < 0 else "#3b6ea5" for value in plot_data["Profit"]]
 
 bars = ax.bar(
     plot_data["Discount band"].astype(str),
@@ -371,6 +372,7 @@ ax.set_title("Furniture Profit by Discount Band", loc="left", fontweight="bold")
 ax.set_xlabel("Discount band")
 ax.set_ylabel("Profit")
 ax.yaxis.set_major_formatter(FuncFormatter(lambda value, _: f"£{value / 1000:,.0f}k"))
+ax.margins(y=0.16)  # keep the negative labels clear of the axis ticks
 ax.spines[["top", "right"]].set_visible(False)
 ax.grid(axis="y", alpha=0.2)
 ax.set_axisbelow(True)

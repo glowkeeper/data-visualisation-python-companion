@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Reject staged notebooks that still carry executed output.
+# Source: scripts/check_notebook_outputs.py (versioned; reinstall with
+#   cp scripts/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit)
+
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+CHECK="$ROOT/scripts/check_notebook_outputs.py"
+
+[ -f "$CHECK" ] || exit 0
+
+# Prefer the project venv, but do not depend on it existing.
+if [ -x "$ROOT/.venv/bin/python" ]; then
+    PY="$ROOT/.venv/bin/python"
+elif command -v python3 >/dev/null 2>&1; then
+    PY="$(command -v python3)"
+else
+    echo "pre-commit: no python found; skipping notebook output check" >&2
+    exit 0
+fi
+
+exec "$PY" "$CHECK"

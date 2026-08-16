@@ -137,7 +137,7 @@ fig, ax = plt.subplots(figsize=(11, 4))
 ax.plot(
     monthly_sales.index,
     monthly_sales["Sales"],
-    color="#365f91",
+    color="#3b6ea5",
     marker="o",
     linewidth=2,
 )
@@ -476,7 +476,7 @@ fig, ax = plt.subplots(figsize=(11, 5))
 ax.plot(
     recent_history.index,
     recent_history["Sales"],
-    color="#365f91",
+    color="#3b6ea5",
     marker="o",
     linewidth=2,
     label="Historical Sales",

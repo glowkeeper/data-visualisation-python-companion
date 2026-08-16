@@ -79,6 +79,10 @@ notebooks/
 data/
     HighStreetRetailData.xlsx
 
+scripts/
+    check_notebook_outputs.py
+    pre-commit
+
 README.md
 pyproject.toml
 ```
@@ -389,6 +393,33 @@ You can read each Markdown version in your browser without setting up Python. If
 Suggestions and improvements are always welcome.
 
 If you discover an issue or have an idea for a useful extension, please open an issue or submit a pull request.
+
+### Editing a notebook
+
+The **Markdown file is the source of truth**. Edit the `.md`, then regenerate
+its notebook:
+
+```bash
+python -m jupytext --to notebook \
+    --output notebooks/week-08/explaining-ai-and-ethical-analytics.ipynb \
+    notebooks/week-08/explaining-ai-and-ethical-analytics.md
+```
+
+Committed notebooks must contain **no executed output**. Outputs bloat the
+repository and produce diffs that cannot be reviewed.
+
+A pre-commit hook enforces this. Install it once after cloning:
+
+```bash
+cp scripts/pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+To check the whole tree at any time:
+
+```bash
+python scripts/check_notebook_outputs.py --all
+```
 
 ---
 

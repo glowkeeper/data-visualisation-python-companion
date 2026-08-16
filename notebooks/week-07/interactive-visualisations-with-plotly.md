@@ -123,7 +123,7 @@ fixed_figure = px.bar(
     barmode="group",
     title="Sales and Profit Tell Different Category Stories",
     labels={"value": "Amount (£)", "variable": "Measure"},
-    color_discrete_map={"Sales": "#4e79a7", "Profit": "#f28e2b"},
+    color_discrete_map={"Sales": "#3b6ea5", "Profit": "#c55a11"},
 )
 
 fixed_figure.update_layout(
@@ -184,7 +184,7 @@ for category_index, category in enumerate(categories):
             x=category_data["Month"],
             y=category_data["Sales"],
             name="Sales",
-            line={"color": "#4e79a7", "width": 2.5},
+            line={"color": "#3b6ea5", "width": 2.5},
             visible=category_index == 0,
             hovertemplate="%{x|%b %Y}<br>Sales: £%{y:,.0f}<extra></extra>",
         )
@@ -194,7 +194,7 @@ for category_index, category in enumerate(categories):
             x=category_data["Month"],
             y=category_data["Profit"],
             name="Profit",
-            line={"color": "#f28e2b", "width": 2.5},
+            line={"color": "#c55a11", "width": 2.5},
             visible=category_index == 0,
             hovertemplate="%{x|%b %Y}<br>Profit: £%{y:,.0f}<extra></extra>",
         )
@@ -344,8 +344,8 @@ mismatch_figure = px.scatter(
     title="Sub-Categories Reveal Where Sales and Profit Diverge",
     color_discrete_map={
         "Furniture": "#c55a11",
-        "Office Supplies": "#59a14f",
-        "Technology": "#4e79a7",
+        "Office Supplies": "#cc79a7",
+        "Technology": "#3b6ea5",
     },
 )
 
